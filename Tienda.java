@@ -3,7 +3,7 @@
  * @author Amando Antoñano
  *
  */
-
+package tienda;
 import java.rmi.*;
 import java.util.*;
 
@@ -14,14 +14,14 @@ interface Tienda extends Remote {
 	 * @return producto
 	 * @throws SQLException 
 	 */
-    public Producto sacaProducto (int id, int cantidad) throws RemoteException;
+    public Producto compraProducto (int id, int cantidad,float cambio) throws RemoteException;
 
 
          /**
 	 * Mete un producto con una id y una cantidad x al inventario
 	 * @throws SQLException 
 	 */
-    public void meteProducto (int id, int cantidad) throws RemoteException;
+    public void devuelveProducto (int id, int cantidad, float cambio) throws RemoteException;
 
 
     
